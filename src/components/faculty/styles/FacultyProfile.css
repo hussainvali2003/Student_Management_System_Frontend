@@ -1,0 +1,163 @@
+:root {
+  --primary: #4361ee;
+  --secondary: #3f37c9;
+  --accent: #5dd1c6;
+  --bg: #f8f9fa;
+  --card-bg: #fff;
+  --gray: #6c757d;
+  --label: #4895ef;
+  --badge-bg: #eaf0fa;
+}
+
+.faculty-profile-container {
+  max-width: 420px;
+  margin: 3rem auto;
+  padding: 2.5rem 1.5rem 2rem 1.5rem;
+  background: linear-gradient(120deg, var(--primary) 0%, var(--accent) 100%);
+  border-radius: 18px;
+  box-shadow: 0 8px 32px 0 #4361ee22;
+  text-align: center;
+  position: relative;
+}
+
+/* Back Button */
+.faculty-back-btn {
+  display: inline-block;
+  margin-bottom: 1.3rem;
+  background: var(--badge-bg);
+  color: var(--primary);
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1.1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px #4361ee11;
+  transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+  position: absolute;
+  top: 1.2rem;
+  left: 1.2rem;
+}
+.faculty-back-btn:hover,
+.faculty-back-btn:focus {
+  background: var(--primary);
+  color: #fff;
+  box-shadow: 0 4px 16px #4361ee33;
+}
+
+.faculty-profile-container h2 {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 16px #3f37c944;
+}
+
+.faculty-card {
+  background: var(--card-bg);
+  border-radius: 14px;
+  box-shadow: 0 4px 24px #3f37c91a;
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  align-items: flex-start;
+  margin: 0 auto;
+  max-width: 340px;
+  border: 1.5px solid var(--badge-bg);
+  position: relative;
+}
+
+.faculty-card p {
+  font-size: 1.1rem;
+  color: var(--gray);
+  margin: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.faculty-card strong {
+  color: var(--label);
+  min-width: 100px;
+  display: inline-block;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.faculty-card p:last-child {
+  margin-bottom: 0;
+}
+
+/* Colorful Badge for Role */
+.faculty-card p:last-child strong,
+.faculty-card p:last-child {
+  display: inline-flex;
+  align-items: center;
+}
+
+.faculty-card p:last-child {
+  margin-top: 0.2rem;
+}
+
+.faculty-card p:last-child .role-badge {
+  display: inline-block;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  color: #fff;
+  font-weight: 700;
+  padding: 0.2em 0.9em;
+  border-radius: 14px;
+  font-size: 1em;
+  margin-left: 0.5em;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px #4361ee33;
+}
+
+/* Department badge */
+.faculty-card p:nth-child(3) .dept-badge {
+  display: inline-block;
+  background: var(--badge-bg);
+  color: var(--primary);
+  font-weight: 600;
+  padding: 0.15em 0.7em;
+  border-radius: 12px;
+  font-size: 0.98em;
+  margin-left: 0.5em;
+  letter-spacing: 0.4px;
+}
+
+/* Decorative icon (optional) */
+.faculty-profile-container::before {
+  content: "👨‍🏫";
+  position: absolute;
+  top: -2.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 3.2rem;
+  filter: drop-shadow(0 2px 8px #4895ef33);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .faculty-profile-container {
+    padding: 1.5rem 0.5rem 1rem 0.5rem;
+    border-radius: 10px;
+  }
+  .faculty-card {
+    padding: 1.2rem 0.5rem 1rem 0.5rem;
+    border-radius: 8px;
+    max-width: 100%;
+  }
+  .faculty-profile-container h2 {
+    font-size: 1.3rem;
+    margin-bottom: 1.2rem;
+  }
+  .faculty-back-btn {
+    top: 0.7rem;
+    left: 0.7rem;
+    font-size: 0.95rem;
+    padding: 0.4rem 0.9rem;
+  }
+}
